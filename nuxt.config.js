@@ -18,7 +18,7 @@ export default {
   css: ['~/assets/scss/main.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [{ src: '~plugins/vuedraggable.js', ssr: false }],
+  plugins: [{ src: '~plugins/vuedraggable.js', ssr: false }, '~/plugins/service.js',],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -37,7 +37,7 @@ export default {
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: { baseURL: 'http://localhost:8000'},
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
