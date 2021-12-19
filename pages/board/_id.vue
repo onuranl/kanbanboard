@@ -49,6 +49,24 @@ export default {
       this.board = result.data
     }
   },
+  mounted() {
+    const data = localStorage.getItem('visits')
+    if (!data) {
+      var visits = []
+      visits[0] = this.$route.params.id
+      localStorage.setItem('visits', JSON.stringify(visits))
+    } else {
+      var storedVisits = JSON.parse(localStorage.getItem('visits'))
+      if (storedVisits.includes(this.$route.params.id)) {
+        const index = storedVisits.indexOf(this.$route.params.id)
+        if (index > -1) {
+          storedVisits.splice(index, 1)
+        }
+      }
+      storedVisits.push(this.$route.params.id)
+      localStorage.setItem('visits', JSON.stringify(storedVisits))
+    }
+  },
   methods: {
     addBacklog(item) {
       this.board.backlogs.push(item)

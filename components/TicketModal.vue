@@ -34,6 +34,9 @@ export default {
         color: this.color,
       }
       this.$emit('addBacklog', data)
+      this.title = ''
+      this.description = ''
+      this.color = ''
     },
   },
 }
