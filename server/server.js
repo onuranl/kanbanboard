@@ -7,18 +7,14 @@ const mongoose = require("mongoose");
 
 const router = require("./routes/index");
 
-mongoose.connect(
-  process.env.MONGODB_URI,
-  {
+mongoose
+  .connect(process.env.DATABASE_CONNECTION_STRING, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
-  },
-  () => {
-    console.log("connected to the database");
-  }
-);
+    // useCreateIndex: true,
+  })
+  .then(() => console.log("connected to the database"))
+  .catch((e) => console.log(e));
 
 const app = express();
 
