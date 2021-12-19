@@ -9,6 +9,8 @@ Daha önce kullanılan trello tarzı, iş bölümlerini daha kolay kontrol edebi
 - Projenin tamamlanması için gerekli özellikleri api'lar ile ön tarafta tamamla
 - En son olarak home page'i tamamla ve gördüğün eksikleri tamamla
 
+ postman collection: https://app.getpostman.com/join-team?invite_code=8024d6c2829272d92a1692625de85ea6&ws=42719f83-cdbc-4588-bfb2-3d7cfe58ef71
+
 ## Build Setup
 
 ```bash
