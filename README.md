@@ -1,20 +1,29 @@
 # kanbanboard
 
+Daha önce kullanılan trello tarzı, iş bölümlerini daha kolay kontrol edebilmek için kullanılan etkili kanban board uygulaması
+
+## Adımlar
+
+- Tasarımı komponentleştirerek koda aktar
+- Projenin arka tarafı için gerekli kurumları yapıp projenin ön tarafında istenilen şeyleri karşılayacak hale getir
+- Projenin tamamlanması için gerekli özellikleri api'lar ile ön tarafta tamamla
+- En son olarak home page'i tamamla ve gördüğün eksikleri tamamla
+
 ## Build Setup
 
 ```bash
 # install dependencies
 $ npm install
 
-# serve with hot reload at localhost:3000
+# stand up client server at localhost:3000
 $ npm run dev
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+# install dependencies for backend
+$ cd server
+$ npm install
 
-# generate static project
-$ npm run generate
+# stand up backend server at localhost:8000
+$ npm start
 ```
 
 For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
@@ -40,7 +49,6 @@ More information about the usage of this directory in [the documentation](https:
 Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
 
 More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
-
 
 ### `pages`
 
