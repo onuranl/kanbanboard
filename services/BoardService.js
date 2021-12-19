@@ -1,17 +1,17 @@
 export default ({ $axios }) => ({
-    getAll() {
-      return $axios.get('/board')
-    },
+  getAll() {
+    return $axios.get('/board')
+  },
 
-    getByID(id) {
-        return $axios.get(`/board/${id}`)
-    },
-  
-    create(board) {
-      return $axios.create('/board', board)
-    },
+  getByID(id) {
+    return $axios.get(`/board/${id}`)
+  },
 
-    update(id, board) {
-        return $axios.put(`/board/${id}`, board)
-    },
+  create() {
+    return $axios.post('/board')
+  },
+
+  update(id, board) {
+    return $axios.put(`/board/${id}`, board)
+  },
 })

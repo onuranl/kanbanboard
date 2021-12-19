@@ -3,16 +3,15 @@
     <form>
       <div>
         <label for="title">Title </label>
-        <input type="text" v-model="title">
+        <input type="text" v-model="title" />
       </div>
       <div class="my-3">
         <label for="description">Description </label>
-        <b-textarea type="description" v-model="description">
-        </b-textarea>
+        <b-textarea type="description" v-model="description"> </b-textarea>
       </div>
       <div>
         <label for="color">Color </label>
-        <input class="ml-3" type="color" v-model="color">
+        <input class="ml-3" type="color" v-model="color" />
       </div>
     </form>
   </b-modal>
@@ -22,9 +21,9 @@
 export default {
   data() {
     return {
-      title: "",
-      description: "",
-      color: "#0000FF"
+      title: '',
+      description: '',
+      color: '#0000FF',
     }
   },
   methods: {
@@ -32,10 +31,10 @@ export default {
       const data = {
         title: this.title,
         description: this.description,
-        color: this.color
+        color: this.color,
       }
       this.$emit('addBacklog', data)
-    }
-  }
+    },
+  },
 }
 </script>

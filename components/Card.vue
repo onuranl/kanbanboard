@@ -4,7 +4,7 @@
       <h3 class="card_title">{{ title }}</h3>
       <slot />
     </div>
-    <ticket :list="list" />
+    <ticket :list="list" @updateBoard="updateBoard" />
   </div>
 </template>
 
@@ -15,6 +15,11 @@ export default {
   props: {
     title: String,
     list: Array,
+  },
+  methods: {
+    updateBoard() {
+      this.$emit('updateBoard')
+    },
   },
 }
 </script>

@@ -1,6 +1,11 @@
 <template>
   <draggable class="list-group" :list="list" group="people" @change="log">
-    <div class="list-group-item" v-for="(element, index) in list" :key="index">
+    <div
+      class="list-group-item"
+      :style="{ background: element.color }"
+      v-for="(element, index) in list"
+      :key="index"
+    >
       <h5 class="list-group-item-title">{{ element.title }}</h5>
       <p class="list-group-item-description">{{ element.description }}</p>
     </div>
@@ -13,19 +18,8 @@ export default {
     list: Array,
   },
   methods: {
-    add: function () {
-      this.list.push({ name: 'Juan' })
-    },
-    replace: function () {
-      this.list = [{ name: 'Edgard' }]
-    },
-    clone: function (el) {
-      return {
-        name: el.name + ' cloned',
-      }
-    },
-    log: function (evt) {
-      window.console.log(evt)
+    log: function () {
+      this.$emit('updateBoard')
     },
   },
 }
@@ -34,7 +28,6 @@ export default {
 <style lang="scss" scoped>
 .list-group {
   &-item {
-    background: #c440a1;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12),
       0px 16px 32px rgba(0, 0, 0, 0.08);
     border-radius: 8px;
