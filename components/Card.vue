@@ -1,6 +1,9 @@
 <template>
   <div class="card mb-2">
-    <h3 class="card_title">{{ title }}</h3>
+    <div class="d-flex justify-content-between align-items-center">
+      <h3 class="card_title">{{ title }}</h3>
+      <slot />
+    </div>
     <ticket :list="list" />
   </div>
 </template>

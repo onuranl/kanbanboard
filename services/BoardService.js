@@ -12,6 +12,6 @@ export default ({ $axios }) => ({
     },
 
     update(id, board) {
-        return $axios.update(`/board/${id}`, board)
+        return $axios.put(`/board/${id}`, board)
     },
 })
